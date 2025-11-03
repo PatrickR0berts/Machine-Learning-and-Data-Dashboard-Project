@@ -40,4 +40,4 @@ data = wb.data.DataFrame(['SP.DYN.LE00.IN','NY.GDP.PCAP.CD'], economy=countries_
 
 data.dropna(axis=1, inplace=True)  # Remove columns with missing values.
 print(data)  # Display the fetched data.
-data.to_csv('eu_life_expectancy_gdp.csv', index=False)  # Save data to CSV file.
+data.to_csv('eu_and_uk_life_expectancy_gdp.csv', index=False)  # Save data to CSV file.
