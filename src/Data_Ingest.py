@@ -9,7 +9,7 @@ from contextlib import redirect_stdout
 
 
 
-def CleanData(data, row_threshold=0.5, col_threshold=0.14):
+def CleanData(data, row_threshold=1, col_threshold=1):
     """
     Clean the data by removing rows with a high proportion of NaN values.
 
@@ -74,7 +74,7 @@ def ProcessData(data):
     print("\n\n\n")
 
     data_cleaned = CleanData(data=data, row_threshold=0.5, col_threshold=0.14)  # Clean data with specified thresholds.
-
+    data_cleaned = CleanData(data=data_cleaned, row_threshold=0.2)
     data_cleaned_and_processed = data_cleaned # Further processing can be added here.
 
 
@@ -132,3 +132,4 @@ print("Processed Data Quality Summary appended to data_quality_summary.txt")
 
 print("Data Ingestion and Cleaning Completed.")
 print("Ready for further analysis or modeling.")
+
