@@ -13,6 +13,8 @@ def CleanData(data, row_threshold=0.5, col_threshold=0.14):
     """
     Clean the data by removing rows with a high proportion of NaN values.
 
+    Then going to need to find a way to interpolate or impute missing values sensibly.
+
     Parameters:
     data (pd.DataFrame): The DataFrame to be cleaned.
     na_threshold (float): The threshold proportion of NaN values to determine row removal.
@@ -51,7 +53,7 @@ def ProcessData(data):
     Returns:
     pd.DataFrame: The processed and cleaned DataFrame.  
     
-"""
+    """
 
     if data is None:
         print("No data provided, exiting processing.")
